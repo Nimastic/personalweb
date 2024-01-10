@@ -124,6 +124,11 @@ nav ul li a:hover:after{
     color: #ababab;
     font-size: 25px;
 }
+.fa-dumbell{
+    margin-top: 8px;
+    color: #ababab;
+    font-size: 25px;
+}
 .header-text-col-2 .btn2 {
     background: linear-gradient(to bottom right, #000000, #380577); /* Dark purple to lighter purple gradient */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0); /* Soft shadow for 3D effect */
