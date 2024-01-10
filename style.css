@@ -119,6 +119,11 @@ nav ul li a:hover:after{
 .header-text-col-2 h1 span{
     color: #5D3FD3;
 }
+.fa-square-behance{
+    margin-top: 8px;
+    color: #ababab;
+    font-size: 25px;
+}
 .header-text-col-2 .btn2 {
     background: linear-gradient(to bottom right, #000000, #380577); /* Dark purple to lighter purple gradient */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0); /* Soft shadow for 3D effect */
@@ -142,7 +147,7 @@ nav ul li a:hover:after{
 }
 .header-text-col-2 .btn2::before {
     content: '';
-    position: absolute; /* Adjust as needed */ 
+    position: absolute; /* Adjust as needed */
     top: 0px; /* Adjust as needed */
     left: 0;
     right: 0;
@@ -461,7 +466,7 @@ nav .fa-solid{
 
     #sidemenu a {
         /* Adjust the styles of your anchor tags if necessary */
-        position: 
+        position: relative;
         margin-top: 0;
         display: block; /* This will make the entire area of the list item clickable */
     }
