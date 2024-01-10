@@ -1,0 +1,634 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, 'Preah-Vihear', sans-serif;
+    box-sizing: border-box;
+    
+}
+@font-face {
+    font-family: 'Preah-Vihear';
+    src: url(/fonts/Preahvihear-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #060013; /* Changed to dark purple */
+    color: #fff;
+}
+
+#header{
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(to bottom, #342944, #060013); /* Dark purple to lighter purple gradient */
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 10%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Aligns logo to the left and menu items to the right */
+    position: fixed;
+    top: 0;
+    left: 0; /* Added to extend the nav bar across the full width of the viewport */
+    right: 0; /* Added to extend the nav bar across the full width of the viewport */
+    padding: 15px;
+    z-index: 100; /* Ensures the nav is above other content */
+    background: linear-gradient(to bottom right, #000000, #380577); /* Gradient background */
+}
+.logo{
+    width: 5%;
+    margin-right: 170px; /* Pushes the logo to the left and everything else to the right */
+
+}
+
+#sidemenu {
+    display: flex;
+    list-style-type: none; /* Removes default list styling */
+    margin-left: auto; /* This will push the menu to the right */
+    padding: 0; /* Removes default padding */
+}
+#sidemenu li {
+    padding: 0 15px; /* Add some horizontal padding between links */
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #5D3FD3;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover:after{
+    content: '';
+    width: 100%;
+}
+
+.header-text h1{
+    font-size: 60px;
+    margin-top: 40px;
+}
+.header-text-col-1 img{
+    max-width: 100%; /* Ensures the image is not bigger than its container */
+    height: auto; /* Keeps the image aspect ratio */
+    margin-left: 540px;
+
+    margin-top: 80px;
+    display: flex; /* Applies flexbox layout */
+    justify-content: center; /* Centers children horizontally */
+    align-items: center;
+}
+.header-text-col-2 h1{
+    align-items: center; /* This will vertically center your items */
+    justify-content: center; /* This will horizontally center your items */
+    flex-direction: column; /* This stacks your items vertically */
+    text-align: center;
+    position: center;
+    font-size: 60px;
+    flex-basis: 100%;
+    color: #ffffff;
+}
+.header-text-col-2 p{
+    align-items: center; /* This will vertically center your items */
+    justify-content: center; /* This will horizontally center your items */
+    flex-direction: column; /* This stacks your items vertically */
+    text-align: center;
+    position: center;
+    font-size: 40px;
+    flex-basis: 100%;
+    color: #ffffff;
+}
+.header-text-col-2 h1 span{
+    color: #5D3FD3;
+}
+.header-text-col-2 .btn2 {
+    background: linear-gradient(to bottom right, #000000, #380577); /* Dark purple to lighter purple gradient */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0); /* Soft shadow for 3D effect */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px 50px; /* Padding inside the button */
+    position: relative; /* Needed for pseudo-element positioning */
+    color: white; /* Text color */
+    width: 300px; /* Adjust as needed */
+    margin: 20px; /* Adjust as needed */
+    display: block;
+    margin: 50px auto; /* Center the button with automatic horizontal margins */
+    width: fit-content; /* Width according to content size */
+    border-radius: px; /* Rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.5s; /* Smooth transition for hover effects */
+    border: none; /* No border */
+    transform: translateY(0px); /* Initial position */
+}
+.header-text-col-2 .btn2:hover {
+    transform: translateY(-5px); /* Move up slightly on hover for "pop" effect */
+    background: linear-gradient(to bottom right, #300051, #390052); /* Dark purple to lighter purple gradient */
+}
+.header-text-col-2 .btn2::before {
+    content: '';
+    position: absolute; /* Adjust as needed */ 
+    top: 0px; /* Adjust as needed */
+    left: 0;
+    right: 0;
+    height: 5px; /* Height of the 3D effect */
+    background: #5800a4; /* A different shade of purple for the 3D line */
+    border-radius: 10px 10px 0 0; /* Rounded corners on the top edge */
+}
+/* ---------------about--- */
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 50%;
+
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 10px;
+    background: radial-gradient(circle, #5b00a5, #000)
+}
+.about-col-1 .btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #5D3FD3;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+.about-col-1 .btn2 {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #5D3FD3;
+    padding: 14px 50px;
+    border-radius: 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for transform and box-shadow */
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transform: translateY(0); /* Initial position */
+}
+.about-col-1 .btn2:hover {
+    background: #5D3FD3;
+    transform: scale(1.1) translateY(-5px); /* Moves the button up slightly */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds a shadow to make it pop */
+}
+.about-col-2 p{
+    flex-basis: -30px;
+    font-size: 18px;
+    margin-left: 0px;
+    margin-top: 50px; /* Adds space above the break */
+    margin-bottom: 10px; /* Adds space below the break */
+    
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+.custom-break {
+    margin-top: 50px; /* Adds space above the break */
+    margin-bottom: 10px; /* Adds space below the break */
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #5D3FD3;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 8px 0;
+    font-size: 18px;
+}
+.tab-contents ul li span{
+    color: #9426ef;
+    font-size: 20px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+
+/* ---------------services--- */
+#services{
+    padding: 30px 0;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.services-list div:hover{
+    background: #5D3FD3;
+    transform: translateY(-10px);
+}
+/* ---------------portfolio--- */
+#portfolio{
+    padding: 50px 0 80px;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.4), #5D3FD3);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #5D3FD3;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #5D3FD3;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #5D3FD3;
+}
+/* ---------------contact--- */
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #5D3FD3;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    margin-right: 15px;
+    color: #ababab;
+    font-size: 30px;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #5D3FD3;
+    transform: translateY(-5px);
+}
+.btn2{
+    display: inline-block;
+    background: #5D3FD3;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    margin-top: 20px;
+}
+/* ---------------responsive--- */
+nav .fa-solid{
+    display: none;
+}
+@media only screen and (max-width: 768px){
+    #header{
+        height: 65vh;
+    }
+    #sidemenu {
+        display: flex;
+        flex-direction: column; /* Stack the items vertically */
+        align-items: flex-start; /* Align items to the start (left side in LTR languages) */
+        width: 38%; /* Optional: Set the width of the sidemenu to full width */
+        /* Ensure there's no horizontal padding that may affect the layout */
+        padding-left: 0;
+        padding-right: 0;
+        position: fixed;
+    }
+    #sidemenu i {
+        /* Ensure full width of li items and adjust padding as needed */
+        display: block;
+ /* Adjust the padding to suit your design */
+    }
+    #sidemenu li {
+        /* Ensure full width of li items and adjust padding as needed */
+        width: 100%;
+        padding: 0px; /* Adjust the padding to suit your design */
+    }
+
+    #sidemenu a {
+        /* Adjust the styles of your anchor tags if necessary */
+        position: 
+        margin-top: 0;
+        display: block; /* This will make the entire area of the list item clickable */
+    }
+
+    /* Additional styles for mobile, such as hiding the hamburger menu icon if the menu is open */
+    .logo{
+        width: 20%;
+        margin-right: 0px;
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text-col-1 img{
+        margin-left: 54px;
+        margin-top: 0px;
+    }
+    .header-text p{
+        font-size: 10px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    .header-text-col-2 p{
+        margin-top: 20px;
+        align-items: center; /* This will vertically center your items */
+        justify-content: center; /* This will horizontally center your items */
+        flex-direction: column; /* This stacks your items vertically */
+        text-align: center;
+        position: center;
+        font-size: 25px;
+        flex-basis: 100%;
+        color: #ffffff;
+    }
+    .header-text-col-2 h1{
+        color: #ffffff;
+        flex-basis: 100%;
+        font-size: 25px;
+    }
+    .header-text-col-2 h1 span{
+        color: #5D3FD3;
+        flex-basis: 100%;
+        font-size: 40px;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    nav {
+        
+        width: 96%;
+    }
+    nav ul{
+        background: linear-gradient(to top left, #000000, #380577); /* Gradient background */
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .btn2 {
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        background-color: #5D3FD3;
+        padding: 14px 50px;
+        border-radius: 6px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+    .btn2:hover {
+        transform: translateY(-5px); /* Moves the button up slightly */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds a shadow to make it pop */
+    
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .about-col-2 p{
+        margin-top: 25px;
+        font-size: 20px;
+    }
+    .portfolio .sub-title h1{
+        margin-top: -20px;
+    }
+    .tab-links{
+        margin-right: 20px;
+        font-size: 16px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        padding: 14px
+    }
+
+
+}
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}
+/* ---------------animation--- */
+.trail {
+    position: absolute;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background: #5D3FD3;
+    pointer-events: none;
+    /*mix-blend-mode: difference;*/
+    z-index: 1000;
+}
+.box {
+    width: 200px; /* Set the width of the box */
+    height: 200px; /* Set the height of the box */
+    background-image: radial-gradient(circle, #5b00a5, #000); /* Gradient from dark grey to black */
+    border-radius: 10px; /* Optional: to round the corners of the box */
+}
+.circle {
+    height: 24px;
+    width: 24px;
+    border-radius: 24px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 99999999; /* so that it stays on top of all other elements */
+}
+#spline-container {
+    height: 50vh; /* Adjust this value to control the height */
+    width: 100%;
+    overflow: hidden; /* To prevent overflow of the Spline content */
+}
+spline-viewer {
+    height: 100%;
+    width: 100%;
+}
+    
+
