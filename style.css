@@ -27,7 +27,9 @@ body{
     background-position: center;
 }
 .container{
+    
     padding: 10px 10%;
+
 }
 nav{
     display: flex;
@@ -89,7 +91,8 @@ nav ul li a:hover:after{
 .header-text-col-1 img{
     max-width: 100%; /* Ensures the image is not bigger than its container */
     height: auto; /* Keeps the image aspect ratio */
-    margin-left: 540px;
+    margin-left: 300px;
+    align-items: center;
 
     margin-top: 80px;
     display: flex; /* Applies flexbox layout */
