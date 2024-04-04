@@ -15,22 +15,23 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    background: #060013; /* Changed to dark purple */
+    background: #342643; /* Changed to dark purple */
     color: #fff;
 }
 
 #header{
     width: 100%;
     height: 80vh;
-    background: linear-gradient(to bottom, #342944, #060013); /* Dark purple to lighter purple gradient */
+    background: #342643; /* Dark purple to lighter purple gradient */
     background-size: cover;
     background-position: center;
 }
 .container{
-    
+    margin-top: -50px;
     padding: 10px 10%;
-
 }
+/* #container {
+     /* Moves the contact section up by 20 pixels */
 nav{
     display: flex;
     align-items: center;
@@ -41,7 +42,7 @@ nav{
     right: 0; /* Added to extend the nav bar across the full width of the viewport */
     padding: 15px;
     z-index: 100; /* Ensures the nav is above other content */
-    background: linear-gradient(to bottom right, #000000, #380577); /* Gradient background */
+    background: #342643; /* Gradient background */
 }
 .logo{
     width: 5%;
@@ -91,7 +92,7 @@ nav ul li a:hover:after{
 .header-text-col-1 img{
     max-width: 100%; /* Ensures the image is not bigger than its container */
     height: auto; /* Keeps the image aspect ratio */
-    margin-left: 300px;
+    margin-left: 350px;
     align-items: center;
 
     margin-top: 80px;
@@ -133,7 +134,7 @@ nav ul li a:hover:after{
     font-size: 25px;
 }
 .header-text-col-2 .btn2 {
-    background: linear-gradient(to bottom right, #000000, #380577); /* Dark purple to lighter purple gradient */
+    background:; /* Dark purple to lighter purple gradient */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0); /* Soft shadow for 3D effect */
     border-radius: 10px; /* Rounded corners */
     padding: 20px 50px; /* Padding inside the button */
@@ -147,26 +148,23 @@ nav ul li a:hover:after{
     border-radius: px; /* Rounded corners */
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.5s; /* Smooth transition for hover effects */
     border: none; /* No border */
-    transform: translateY(0px); /* Initial position */
+    transform: translateY(-20px); /* Initial position */
 }
 .header-text-col-2 .btn2:hover {
-    transform: translateY(-5px); /* Move up slightly on hover for "pop" effect */
+    transform: translateY(-30px); /* Move up slightly on hover for "pop" effect */
     background: linear-gradient(to bottom right, #300051, #390052); /* Dark purple to lighter purple gradient */
-}
-.header-text-col-2 .btn2::before {
-    content: '';
-    position: absolute; /* Adjust as needed */
-    top: 0px; /* Adjust as needed */
-    left: 0;
-    right: 0;
-    height: 5px; /* Height of the 3D effect */
-    background: #5800a4; /* A different shade of purple for the 3D line */
-    border-radius: 10px 10px 0 0; /* Rounded corners on the top edge */
 }
 /* ---------------about--- */
 #about{
-    padding: 80px 0;
-    color: #ababab;
+    display: flex;
+    justify-content: space-between; /* Adjusts the spacing between the two columns */
+    align-items: flex-start; /* Aligns items at the start of the container */
+    flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
+    padding: 80px 0; /* Keeps your existing padding */
+}
+.about-col-1, .about-col-2{
+    transform: translateY(50px);
+    flex-basis:46%; /* Adjust this value based on your design needs */
 }
 .row{
     display: flex;
@@ -213,7 +211,7 @@ nav ul li a:hover:after{
 }
 .about-col-2 p{
     flex-basis: -30px;
-    font-size: 18px;
+    font-size: 15px;
     margin-left: 0px;
     margin-top: 50px; /* Adds space above the break */
     margin-bottom: 10px; /* Adds space below the break */
@@ -314,24 +312,117 @@ nav ul li a:hover:after{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 .work{
     border-radius: 10px;
     position: relative;
     overflow: hidden;
 }
+
+.medal-icon {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    width: 50px; /* Adjust based on the size of your medal image */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1; /* Ensure it's above the other image */
+}
+
 .work img{
-    width: 100%;
+    max-width: 100%;
     border-radius: 10px;
     display: block;
     transition: transform 0.5s;
-
+    
 }
+.work-description p {
+    margin-bottom: 20px; /* Adjust space below the paragraph */
+    margin-top: 20px;
+}
+
+.work a {
+    margin-top:20px;
+}
+
+/* Existing .timeline and .timeline::before setup */
+.timeline {
+    position: relative;
+    padding: 20px 0;
+    left: 100px;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 100; /* Align the line to the left side of the container */
+    top: 0;
+    width: 2px; /* Line width */
+    height: 100%;
+    background: #fff; /* Line color */
+  }
+  
+  /* Modified .timeline-content setup */
+  .timeline-content {
+    width: 45%;
+    margin-left: 50px; /* This will push the content to the right */
+    left: 500px;
+    padding: 0 15px;
+    text-align: left; /* Adjust text alignment if necessary */
+    bottom: 100px;
+  }
+
+  .timeline-item {
+    margin-bottom: 50px;
+  }
+  
+  /* Adjust .timeline-dot to align with the line on the left */
+  .timeline-dot {
+    position: absolute;
+    left: 100; /* Align the dot with the line */
+    transform: translateX(-50%); /* Center the dot on the line */
+    height: 15px; /* Dot size */
+    width: 15px; /* Dot size */
+    background: #ffffff; /* Dot color */
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px #111; /* Border color */
+  }
+  
+  /* Adjustments for responsiveness */
+  @media (max-width: 768px) {
+    .timeline-content {
+      width: 90%; /* Full width on smaller screens */
+      padding: 10px; /* Adjust padding as needed */
+      margin-left: auto; /* Keep content on the right */
+    }
+    .timeline::before {
+      left: 100; /* Keep line on the left side */
+    }
+    .timeline-dot {
+      left: 100; /* Keep dots aligned with the line */
+    }
+  }
+  
+
+.tech-stack {
+    display: flex;
+    flex-direction: row;
+    justify-content: start; /* Align images to the start of the container */
+    gap: 10px; /* Space between each image */
+}
+
+.tech-stack img {
+
+    width: 60px; /* Adjust based on your preference */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain;
+}
+
+
 .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.4), #5D3FD3);
+    background: rgba(52, 38, 67, 0.5); 
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -362,6 +453,13 @@ nav ul li a:hover:after{
     border-radius: 50%;
     text-align: center;
 }
+
+.fa-crown {
+    color: gold; /* Crown color */
+    margin-left: 5px; /* Space from the title */
+    vertical-align: middle; /* Align with the title */
+}
+
 .work:hover img{
     transform: scale(1.1);
 }
@@ -383,6 +481,9 @@ nav ul li a:hover:after{
     background: #5D3FD3;
 }
 /* ---------------contact--- */
+#contact {
+    margin-top: -80px; /* Moves the contact section up by 20 pixels */
+}
 .contact-left{
     flex-basis: 35%;
 }
@@ -528,7 +629,7 @@ nav .fa-solid{
         width: 96%;
     }
     nav ul{
-        background: linear-gradient(to top left, #000000, #380577); /* Gradient background */
+        background: #342643;
         position: fixed;
         top: 0;
         right: -200px;

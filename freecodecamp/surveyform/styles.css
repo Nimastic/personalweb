@@ -1,0 +1,81 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4; /* Light grey background */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Full viewport height */
+}
+
+#title {
+    color: #333; /* Dark grey color */
+    margin: 20px;
+}
+
+#description {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #666; /* Medium grey color */
+}
+
+#survey-form {
+    background-color: white;
+    max-width: 600px;
+    width: 100%;
+    margin: 10px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow around the form */
+    border-radius: 8px; /* Rounded corners */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: calc(100% - 22px); /* Adjust width to account for padding and border */
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding and border in element's width */
+}
+
+/* Focus styles for inputs */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #007bff; /* Highlight color when focused */
+    outline: none; /* Remove default focus outline */
+}
+
+button {
+    background-color: #007bff; /* Bootstrap primary blue */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Larger font size */
+    font-weight: bold;
+    transition: background-color 0.3s; /* Smooth background color change */
+}
+
+button:hover,
+button:focus {
+    background-color: #0056b3; /* Darker blue on hover/focus */
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+    #survey-form {
+        width: 90%;
+        padding: 15px;
+    }
+}

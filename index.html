@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Welcome!</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/5859aac70e.js" crossorigin="anonymous"></script>
     <script type="module" src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"></script>
@@ -20,12 +20,13 @@
             <img src="images/logo.png" class="logo">
             <ul id="sidemenu">
                 <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-                <!--<li><a href="#services">Services</a></li>-->
                 <li><a > </a></li>
                 <li><a href="#spline-container" onclick="closemenu()">Home</a></li>
-                <li><a href="#about" onclick="closemenu()">About</a></li>
-                <li><a href="#portfolio" onclick="closemenu()">Portfolio</a></li>
-                <li><a href="#contact" onclick="closemenu()">Contact</a></li>
+                <!-- <li><a href="#portfolio" onclick="closemenu()">Work</a></li> -->
+                <li><a href="projects.html" onclick="closemenu()">Projects</a></li>
+                <!-- <li><a href="blog.html" onclick="closemenu()">Blog</a></li> -->
+                <li><a href="index.html#contact" onclick="closemenu()">Contact</a></li>
+                <li><a href="blog.html" onclick="closemenu()">Others</a></li> <!-- art should be in here -->
             </ul>
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
@@ -49,38 +50,55 @@
                 <!-- <a href="images/my-cv.pdf" download class="btn btn2">Download my CV</a> -->
             </div>
             <div class="about-col-2">
-                <h1 class="sub-title">About Me</h1>
+                <!-- <h1 class="sub-title">About Me</h1> -->
                 <p>
-                    I am a Year 2 Computer Science Undergraduate from NUS <br class="custom-break">
-                    Looking for a Summer Internship in the field of Software Engineering <br class="custom-break">
-                    I love entrepreneurship, volunteering and creating projects <br class="custom-break">
-                    Given my contributions to the different organisations I've worked for  <br class="custom-break">
-                    and volunteered at, I believe I'll be an asset to your organisation.
+                    Hi I'm Jeriel! I'm a current Year 2 Computer Science Undergraduate <br class="custom-break">
+                    at National University of Singapore. I'm interested solving (real-world)  <br class="custom-break">
+                    problems, and developed a strong  Mathematics background.
                 </p>
+                <p>
+                    Aside from coding, I've volunteered at different organisations since I was 13,<br class="custom-break">
+                    and my other past-times include drawing, calisthenics and playing volleyball! <br class="custom-break">
+                </p>
+                <p>
+                    In the field of Entrepreneurship, I've helped built a start-up, OmegaCity, <br class="custom-break">
+                    and my own personal eCommerce brand, EliteWeightVests, selling <br class="custom-break">
+                    calisthenics workout equipments during COVID-19. I also developed a  <br class="custom-break">
+                    mobile application for it!
+                </p>
+                <p>
+                    I'm currently looking for Software Engineering internship opportunies, <br class="custom-break">
+                    feel free to hit me up in the contact section below! <br class="custom-break">
+                </p>
+                
                 <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Technical Projects</p>
-                    <p class="tab-links" onclick="opentab('experience')">Competitions</p>
-                    <p class="tab-links" onclick="opentab('education')">Others</p>
+                    <p class="tab-links active-link" onclick="opentab('currently')">What I'm Currently Working On</p>
+                    <p class="tab-links" onclick="opentab('achievements')">Achievements</p>
+                    <p class="tab-links" onclick="opentab('others')">Others</p>
                 </div>
-                <div class="tab-contents active-tab" id="skills">
+                <div class="tab-contents active-tab" id="currently">
                     <ul>
                         <li><span>Frontend Developer</span><br>Developed a mobile application for NUS Sheares Hall<br>Technical Stack: React.js, Tailwind CSS</li>
                         <li><span>Mobile Application Developer</span><br>Developed a mobile application to increase productivity for NUS Orbital. LOA: GEMINI <br> Technical Stack: Flutter, Firebase  </li>
                         <li><span></span><br> </li>
                     </ul>
                 </div>
-                <div class="tab-contents" id="experience">
+                <div class="tab-contents" id="achievements">
                     <ul>
-                        <li><span>IEEE iNTUition v8.0 | Overall Champion</span><br> Developed a Q.Now, MedTech mobile application that simulates and weighs <br> the waiting time of private and public clinics in Singapore,<br> to improve long wait times during Covid-19 </li>
-                        <li><span>NUS Fintech Summit 2024 | 3rd Place</span><br> Developed a full-stack Bank-to-Bank / User-to-User simulated conditional token-wrapping and atomic swap web prototype inspired by the XRP inter-ledger protocol </li>
-                        <li><span>Hack&Roll Hackathon 2023 | Participation</span><br>Developed a Weather Forecast Website using HTML & CSS</li>
-                        <li><span>Singapore Math Olympiad | Bronze</span><br></li>
+                        <li><span>IEEE iNTUition v8.0 | Overall Champion </li>
+                        <li><span>NUS Fintech Summit 2024 | 3rd Place </li>
+                        <li><span>Singapore Math Olympiad | Bronze (2016, 2017)</span><br></li>
+                        <li><span>Hwa Chong Maths Challenge 2017 | 3rd Team Placing</span>
+                        <li><span>Australian Mathematics Competition | Distinction</span>
+                        <li><span>Euclid Mathematics Contest | Distinction</span>
+
+
                     </ul>
                 </div>
-                <div class="tab-contents" id="education">
+                <div class="tab-contents" id="others">
                     <ul>
                         <li><span>Art Portfolio</span><br><a href="https://www.behance.net/jerielchan/projects"><i class="fa-brands fa-square-behance"></i></a></li>
-                        <li><span>Elite Weight Vest</span><br><a href="https://www.eliteweightvests.com/"><i class="fa-solid fa-dumbbell"></i></a></li>
+                        <li><span>EliteWeightVest</span><br><a href="https://www.eliteweightvests.com/"><i class="fa-solid fa-dumbbell"></i></a></li>
                         <li><span>Curriculum Planner, Volunteer Tutor</span><br>Code 4 Community at Centre for Computing for Social Good & Philanthropy by SoC</li>
                         <li><span>Director of Operations</span><br>NUS Entrepreneurship Society</li>
                         <li><span>Officer Commanding (NS)</span><br>Special Operations Command at Singapore Police Force</li>
@@ -128,47 +146,40 @@
 <!---------------portfolio-------->
 <div id="portfolio">
     <div class="container">
-        <h1 class="sub-title">
-            My Work
-        </h1>
-        <div class="work-list">
-            <div class="work">
-                <img src="images/QNOWmockup.png">
-                <div class="layer">
-                    <h3>Q.Now</h3>
-                    <p>MedTech Mobile Application</p>
-                    <p>Overall Champions for IEEE iNTUition v8.0</p>
-                    <a href="https://devpost.com/software/asdf-5nl32r"><i class="fa-solid fa-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/Orbitalmockup.png">
-                <div class="layer">
-                    <h3>Smart Personal Assistant (SPA)</h3>
-                    <p>NUS Orbital 2023 (Gemini)</p>
-                    <a href="https://drive.google.com/drive/folders/1kzC3LO2XLwsugU8aBMuxBhp-K6xFZAS8?usp=sharing"><i class="fa-solid fa-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/ShearesWeb.png">
-                <div class="layer">
-                    <h3>Sheares App</h3>
-                    <p>NUS Sheares Hall Mobile Application</p>
-                    <a href="https://github.com/Nimastic/sheareswebapp-events"><i class="fa-solid fa-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/TriveTribe.png">
-                <div class="layer">
-                    <h3>TriveTribe</h3>
-                    <p>Gamified Event Tracking Management System</p>
-                    <a href="https://github.com/TriveTribe/TriveTribe"><i class="fa-solid fa-up-right-from-square"></i></a>
-                </div>
-            </div>
+      <h1 class="sub-title">Technical Experience</h1>
+      <div class="timeline">
+        <!-- Timeline item -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h4 class="timeline-item-title">Web Game Developer</h4>
+            <h5 class="degree-title"><i>Developed a collaborative gamified coding platform for Omega City</i></h5>
+            <span>Nov 2023 — Mar 2024</span>
+            <!-- <p class="timeline-text">
+              Relevant Coursework: Programming Methodology, Discrete Structures...
+            </p> -->
+          </div>
         </div>
-        <a href="https://github.com/Nimastic" class="btn">View More</a>
+        
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4 class="timeline-item-title">Frontend Mobile Developer</h4>
+              <h5 class="degree-title"><i>Developed a mobile application for NUS Sheares Hall</i></h5>
+              <span>May 2023 — Feb 2024</span>
+              <!-- <p class="timeline-text">
+                Relevant Coursework: Programming Methodology, Discrete Structures...
+              </p> -->
+            </div>
+          </div>
+        
+        <!-- Repeat for each timeline item -->
+        <!-- ... other timeline items ... -->
+      </div>
+      <a href="https://linkedin.com/in/jerielchan" class="btn">View More</a>
     </div>
-</div>
+  </div>
+  
 <!---contact-->
 <div id="contact">
     <div class="container">
