@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome!</title>
+    <link rel="icon" type="image/png" href="images/memoji.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5859aac70e.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"></script>
+</head>
+<body>
+
+<div id="spline-container">
+    <spline-viewer url="https://prod.spline.design/onEEKBC9GHFgO2RS/scene.splinecode" events-target="global"></spline-viewer>
+</div>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                <li><a > </a></li>
+                <li><a href="#spline-container" onclick="closemenu()">Home</a></li>
+                <!-- <li><a href="#portfolio" onclick="closemenu()">Work</a></li> -->
+                <li><a href="projects.html" onclick="closemenu()">Projects</a></li>
+                <!-- <li><a href="blog.html" onclick="closemenu()">Blog</a></li> -->
+                <li><a href="index.html#contact" onclick="closemenu()">Contact</a></li>
+                <li><a href="blog.html" onclick="closemenu()">Others</a></li> <!-- art should be in here -->
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text-col-1">
+            <img src="images/memoji.png"><br>
+        </div>
+        <div class="header-text-col-2">
+            <h1> Hi I'm <span>Jeriel Chan </span> </h1>
+            <p>Aspiring Software Engineer</p>
+            <a href="images/Jeriel-Chan-CV.pdf" download class="btn btn2">Download my CV</a>
+            
+        </div>
+    </div>
+</div>
+<!-- ---------------about---/ -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png">
+                <!-- <a href="images/my-cv.pdf" download class="btn btn2">Download my CV</a> -->
+            </div>
+            <div class="about-col-2">
+                <!-- <h1 class="sub-title">About Me</h1> -->
+                <p>
+                    Hi I'm Jeriel! I'm a current Year 2 Computer Science Undergraduate <br class="custom-break">
+                    at National University of Singapore. I'm interested solving (real-world)  <br class="custom-break">
+                    problems, and developed a strong  Mathematics background.
+                </p>
+                <p>
+                    Aside from coding, I've volunteered at different organisations since I was 13,<br class="custom-break">
+                    and my other past-times include drawing, calisthenics and playing volleyball! <br class="custom-break">
+                </p>
+                <p>
+                    In the field of Entrepreneurship, I've helped built a start-up, OmegaCity, <br class="custom-break">
+                    and my own personal eCommerce brand, EliteWeightVests, selling <br class="custom-break">
+                    calisthenics workout equipments during COVID-19. I also developed a  <br class="custom-break">
+                    mobile application for it!
+                </p>
+                <p>
+                    I'm currently looking for Software Engineering internship opportunies, <br class="custom-break">
+                    feel free to hit me up in the contact section below! <br class="custom-break">
+                </p>
+                
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('currently')">What I'm Currently Working On</p>
+                    <p class="tab-links" onclick="opentab('achievements')">Achievements</p>
+                    <p class="tab-links" onclick="opentab('others')">Others</p>
+                </div>
+                <div class="tab-contents active-tab" id="currently">
+                    <ul>
+                        <li><span>Frontend Developer</span><br>Developed a mobile application for NUS Sheares Hall<br>Technical Stack: React.js, Tailwind CSS</li>
+                        <li><span>Mobile Application Developer</span><br>Developed a mobile application to increase productivity for NUS Orbital. LOA: GEMINI <br> Technical Stack: Flutter, Firebase  </li>
+                        <li><span></span><br> </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="achievements">
+                    <ul>
+                        <li><span>IEEE iNTUition v8.0 | Overall Champion </li>
+                        <li><span>NUS Fintech Summit 2024 | 3rd Place </li>
+                        <li><span>Singapore Math Olympiad | Bronze (2016, 2017)</span><br></li>
+                        <li><span>Hwa Chong Maths Challenge 2017 | 3rd Team Placing</span>
+                        <li><span>Australian Mathematics Competition | Distinction</span>
+                        <li><span>Euclid Mathematics Contest | Distinction</span>
+
+
+                    </ul>
+                </div>
+                <div class="tab-contents" id="others">
+                    <ul>
+                        <li><span>Art Portfolio</span><br><a href="https://www.behance.net/jerielchan/projects"><i class="fa-brands fa-square-behance"></i></a></li>
+                        <li><span>EliteWeightVest</span><br><a href="https://www.eliteweightvests.com/"><i class="fa-solid fa-dumbbell"></i></a></li>
+                        <li><span>Curriculum Planner, Volunteer Tutor</span><br>Code 4 Community at Centre for Computing for Social Good & Philanthropy by SoC</li>
+                        <li><span>Director of Operations</span><br>NUS Entrepreneurship Society</li>
+                        <li><span>Officer Commanding (NS)</span><br>Special Operations Command at Singapore Police Force</li>
+                        <!--<li><span>Study Skills Workshop Presenter</span><br></li>-->
+                        <!--<li><span>Math Olympiad Private Tutor</span><br></li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!---------------services-------
+<div id="services">
+    <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>
+                        I can design beautiful and responsive websites for you.
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>Web Design</h2>
+                    <p>
+                        I can design beautiful and responsive websites for you.
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>Web Design</h2>
+                    <p>
+                        I can design beautiful and responsive websites for you.
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+    </div>
+</div>
+-->
+<!---------------portfolio-------->
+<div id="portfolio">
+    <div class="container">
+      <h1 class="sub-title">Technical Experience</h1>
+      <div class="timeline">
+        <!-- Timeline item -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h4 class="timeline-item-title">Web Game Developer</h4>
+            <h5 class="degree-title"><i>Developed a collaborative gamified coding platform for Omega City</i></h5>
+            <span>Nov 2023 — Mar 2024</span>
+            <!-- <p class="timeline-text">
+              Relevant Coursework: Programming Methodology, Discrete Structures...
+            </p> -->
+          </div>
+        </div>
+        
+        
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4 class="timeline-item-title">Frontend Mobile Developer</h4>
+              <h5 class="degree-title"><i>Developed a mobile application for NUS Sheares Hall</i></h5>
+              <span>May 2023 — Feb 2024</span>
+              <!-- <p class="timeline-text">
+                Relevant Coursework: Programming Methodology, Discrete Structures...
+              </p> -->
+            </div>
+          </div>
+        
+        <!-- Repeat for each timeline item -->
+        <!-- ... other timeline items ... -->
+      </div>
+      <a href="https://linkedin.com/in/jerielchan" class="btn">View More</a>
+    </div>
+  </div>
+  
+<!---contact-->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <!--<p><i class="fa-solid fa-paper-plane"></i> t.me/jerielchan</p>-->
+                <p><i class="fa-solid fa-envelope"></i> jerielchanzy@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>+65 9674 2658</p>
+                <div class="social-icons">
+                    <a href="https://github.com/Nimastic"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://linkedin.com/in/jerielchan/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://t.me/jerielchan/"><i class="fa-solid fa-paper-plane"></i></a>
+
+                    <!--<a href="images/my-cv.pdf" download class="btn btn2">Download my CV</a>-->
+                </div>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg">
+                    
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>
+            Created by Jeriel Chan :) <br>
+            using HTML, CSS, JS and Spline3D
+        </p>
+    </div>
+</div>
+
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for (var i = 0; i < tablinks.length; i++){
+            tablinks[i].classList.remove("active-link");
+        }
+        for (var i = 0; i < tabcontents.length; i++){
+            tabcontents[i].classList.remove("active-tab");
+        }
+        document.getElementById(tabname).classList.add("active-tab");
+        event.currentTarget.classList.add("active-link");
+    }
+
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+    
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxAVVDBTO-YYXv1OBe_nZlI8F-XNcyduz48ZUuVOLkxyFBT38lYKdp12N9ffyc_OkyLcA/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById('msg')
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message Sent Successfully!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            }, 5000)
+            form.reset();
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
+
+<p>Current visitors: <span id="visitorCount">0</span></p>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    const socket = io();
+    const visitorCountElement = document.getElementById('visitorCount');
+
+    socket.on('visitorUpdate', (count) => {
+        visitorCountElement.textContent = count;
+    });
+</script>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
+
