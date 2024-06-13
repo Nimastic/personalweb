@@ -8,6 +8,21 @@ function toggleNightMode() {
     document.body.classList.toggle('night-mode');
 }
 
+function toggleDropdown() {
+    var nav = document.querySelector('nav');
+    nav.classList.toggle('show');
+}
+
+// Add event listeners to the navigation links
+document.addEventListener("DOMContentLoaded", function() {
+    var navLinks = document.querySelectorAll('nav ul li button');
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+            toggleDropdown();
+        });
+    });
+});
+
 const socket = io();
 
 socket.on('visitorUpdate', (count) => {
