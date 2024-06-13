@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -43,7 +44,6 @@ nav ul li button {
     transition: all 0.2s ease;
 }
 
-
 nav ul li button:hover {
     top: -3px;
     left: -3px;
@@ -57,7 +57,6 @@ nav ul li button:hover {
     align-items: center;
     justify-content: center;
 }
-
 
 .night-mode-btn i {
     top: 3px;
@@ -93,10 +92,9 @@ section h2 button {
     position: relative;
     box-shadow: 3px 3px 0px #000, 6px 6px 0px rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease;
-    
 }
 
-section h2 button:hover  {
+section h2 button:hover {
     top: -3px;
     left: -3px;
     box-shadow: 0px 0px 0px #000, 3px 3px 0px rgba(0, 0, 0, 0.1);
@@ -157,22 +155,19 @@ section h2 button:hover  {
     box-shadow: 0px 0px 0px #000, 3px 3px 0px rgba(0, 0, 0, 0.1);
 }
 
-
 .section-header {
     display: inline-block;
     background-color: #fff;
     color: #000;
     border: 1px solid #000;
     padding: 10px 20px;
-    border-radius: 0px;
+    border-radius: 0%;
     font-size: 16px;
     font-weight: bold;
     position: relative;
     box-shadow: 3px 3px 0px #000, 6px 6px 0px rgba(0, 0, 0, 0.1);
-    transition: all 0.2s ease;
+    margin-bottom: 500px;
 }
-
-
 
 section {
     padding: 50px;
@@ -221,7 +216,6 @@ img {
 }
 
 /* experience card */
-
 .experience-card {
     display: flex;
     align-items: center;
@@ -284,7 +278,6 @@ img {
 }
 
 /* project cards */
-
 .project-card {
     display: flex;
     align-items: center;
@@ -346,7 +339,6 @@ img {
 }
 
 /* cca-card */
-
 .cca-container {
     display: flex;
     justify-content: center;
@@ -459,7 +451,6 @@ img {
     align-items: center;
 }
 
-
 body.night-mode {
     background-color: #222;
     color: #fff;
@@ -550,4 +541,85 @@ body.night-mode .night-mode-btn {
 
 body.night-mode .night-mode-btn:hover {
     background-color: #888;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul li button {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .night-mode-btn {
+        width: 35px;
+        height: 35px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    section h2 {
+        font-size: 18px;
+        padding: 15px 30px;
+    }
+
+    .button2-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .button2 {
+        width: 45px;
+        height: 45px;
+        font-size: 24px;
+    }
+
+    .experience-card, .project-card, .cca-card {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .experience-card .left-column, .project-card .left-column, .cca-card .left-column {
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .experience-card img, .project-card img, .cca-card img {
+        width: 100px;
+        margin-bottom: 20px;
+    }
+
+    .experience-card .right-column, .project-card .right-column, .cca-card .right-column {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .experience-card h3, .project-card h3, .cca-card h3 {
+        font-size: 20px;
+    }
+
+    .experience-card p, .project-card p, .cca-card p {
+        font-size: 14px;
+    }
+
+    .skills-category .skills-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .skills-category .skills-box img {
+        margin-bottom: 10px;
+    }
 }
