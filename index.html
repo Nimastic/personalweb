@@ -1,5 +1,351 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Undergoing Renovation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Jeriel's Portfolio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="styles.css">
+    <script src="/socket.io/socket.io.js"></script>
+
 </head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><button onclick="scrollToSection('#technical-experience')">Technical Experience</button></li>
+                <li><button onclick="scrollToSection('#Projects')">My projects</button></li>
+                <li><button onclick="scrollToSection('#CCAs')">CCAs</button></li>
+
+                <!-- <li><button onclick="scrollToSection('#skills-tools')">Skills/tools</button></li> -->
+                <li><button onclick="window.location.href='old-site/index.html'">Visit my old site</button></li>
+
+                <li><button class="night-mode-btn" onclick="toggleNightMode()"><i class="fas fa-moon"></i></button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="intro">
+        <h2>Hi, I'm Jeriel!
+            <img src="assets/img/jeriel.png" alt="Jeriel chan">
+            <!-- <button><a>Download my CV</a></button> -->
+            <a href="assets\img\Jeriel Chan's CV.pdf" download class="btn btn2">Download my CV</a>
+            <div class="button2-container">
+                <a href="https://github.com/nimastic" class="button2" style="background-color: #333; color: #fff;"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/jerielchan" class="button2" style="background-color: #0077b5; color: #fff;"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:jerielchanzy@gmail.com" class="button2" style="background-color: #d44638; color: #fff;"><i class="fas fa-envelope"></i></a>
+                <a href="https://codepen.io/jerielchan" class="button2" style="background-color: #000; color: #fff;"><i class="fab fa-codepen"></i></a>
+                <a href="https://www.behance.net/jerielchan" class="button2" style="background-color: #0057ff; color: #fff;"><i class="fab fa-behance"></i></a>
+                <a href="https://t.me/jerielchan" class="button2" style="background-color: #0088cc; color: #fff;"><i class="fab fa-telegram-plane"></i></a>
+            </div>
+            <p>Total Visits: <span id="visitor-count">0</span></p>
+        
+        </h2>
+    </section>
+    
+    <section id="technical-experience">
+        <h2>Technical Experience</h2>
+        <div class="experience-card" style="background-color: #1c1c1c; ">
+            <div class="left-column">
+                <img src="assets\img\protechslogo.png" alt="Protechs Nutrition Logo">
+            </div>
+            <div class="right-column">
+                <h3 style="font-size: 30px; color: #f8c271;">Software Engineer</h3>
+                <h3 style="font-size: 20px; color: #f8c271; margin-top: -25px;">Protechs Nutrition</h3>
+                <p style="color: #f8c271;">Currently spearheading the development of an enterprise-level fitness tracking and social interaction app.</p>
+                <div class="experience-card-links " >
+                    <a href="https://protechsnutrition.com" class="btn" style="background-color: #f8c271; color: #1c1c1c;">Company Site</a>
+                </div>
+            </div>
+        </div>
+        <div class="experience-card" style="background-color: #1e003a; color: #fff;">
+            <div class="left-column">
+                <img src="assets\img\omegacitylogo.png" alt="Omega City Logo">
+            </div>
+            <div class="right-column">
+                <h3 style="font-size: 30px; color:#baa0ff ">Software Developer</h3>
+                <h3 style="font-size: 20px; margin-top: -25px; color:#baa0ff">Omega City</h3>
+                <p style="color:#baa0ff">Developed a real-time gaming platform for learning code, enhancing peer-to-peer collaboration. <br> Secured $10,000 VIP@SOC start-up venture grant and Hangar start-up incubation programme.</p>
+                <div class="experience-card-links">
+                    <a href="https://www.linkedin.com/company/omegacity" class="btn" style="color: #1e003a; background-color: #baa0ff;">Company Site</a>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <section id="Projects">
+        <h2>My Projects</h2>
+        <div class="cca-container"><div class="cca-container">
+            <div class="project-card" style="background-color: #dddddd;">
+                <div class="left-column">
+                    <!-- <img src="assets/img/qnow_logo.png" alt="Q.Now"> -->
+                </div>
+                <div class="right-column">
+                    <h3 style="color: #414141">Q.Now <br> </h3>
+                    <h3 style="font-size: 15px; margin-top: -15px; color: #414141;">IEEE iNTUition v8.0 2022 <br>Hackathon Champions</h3>
+                    <p style="color: #414141">MedTech app comparing waiting time of clinics during Covid 19</p>
+                </div>
+            </div>
+            <div class="project-card" style="background-color: #303f9f;">
+                <div class="left-column">
+                    <!-- <img src="assets/img/nexuswrap_logo.png" alt="NexusWrap"> -->
+                </div>
+                <div class="right-column">
+                    <h3 style="color: #ffffff;">NexusWrap</h3>
+                    <h3 style="font-size: 15px; margin-top: -15px; color: #ffffff;">NUS Fintech Summit 2024 <br> Hackathon 3rd Place</h3>
+                    <p style="color: #ffffff;">Cross-Chain Bridging Platform for NUS Fintech Summit 2024. 3rd Place.</p>
+                </div>
+            </div>
+            <div class="project-card" style="background-color: #0055aa;">
+                <div class="left-column">
+                    <!-- <img src="assets/img/spa_logo.png" alt="Smart Personal Assistant"> -->
+                </div>
+                <div class="right-column">
+                    <h3 style="color: #ffed47;">Smart Personal Assistant </h3>
+                    <h3 style="font-size: 15px; margin-top: -15px; color: #ffed47;">NUS Orbital 2023 Intermediate level</h3>
+                    <p style="color: #ffed47;">Productivity app with machine learning features using TensorFlowLite for task suggestions</p>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    
+
+    <section id="CCAs">
+        <h2>Technical CCAs</h2>
+        <div class="cca-container">
+            <div class="project-card" style="background-color: #512da8;">
+                <div class="right-column">
+                    <h3 style="color: #ffffff;">Robotics Club</h3>
+                    <h3 style="font-size: 15px; margin-top: -15px; color: #ffffff;"> 10 Years Primary to Secondary school </h3>
+                    <p style="color: #ffffff;">Programmed and built various robots: <br> sumo bots, bipedal robot, and a self-sufficient rubbish collecting and sorting truck. <br> Participated in National Junior Robotics Competition and Robofest.</p>
+                </div>
+            </div>
+            <div class="project-card" style="background-color: #ff7043;">
+                <div class="left-column">
+                    <!-- <img src="assets/img/sheares_hall_logo.png" alt="Sheares Hall"> -->
+                </div>
+                <div class="right-column">
+                    <h3 style="color: #ffffff;">Frontend Developer</h3>
+                    <h3 style="font-size: 15px; margin-top: -15px; color: #ffffff;"> NUS Sheares Hall </h3>
+                    <p style="color: #ffffff;">Developed a residency mobile application for events and co-curricular activity tracking.</p>
+                </div>
+            </div>
+            <div class="project-card" style="background-color: #4caf50;">
+                <div class="left-column">
+                    <!-- <img src="assets/img/sheares_hall_logo.png" alt="Sheares Hall"> -->
+                </div>
+                <div class="right-column">
+                    <h3 style="color: #ffffff;">Telegram Bot Developer</h3>
+                    <h3 style="font-size: 15px; margin-top: -15px; color: #ffffff;"> NUS Enterprise </h3>
+                    <p style="color: #ffffff;">Developed a residency mobile application for events and co-curricular activity tracking. NUS Sheares Hall Residences.</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+    <!-- <section id="skills-tools">
+        <h2>Skills/tools</h2>
+        <div class="skills-category">
+            <h3>Frontend</h3>
+            <div class="skills-box">
+                <img src="assets/img/flutter.png" alt="Flutter">
+                <p>Flutter</p>
+                <img src="assets/img/nextjs.png" alt="Next.js">
+                <p>Next.js</p>
+                <img src="assets/img/react.png" alt="React">
+                <p>React</p>
+                <img src="assets/img/svelte.png" alt="Svelte">
+                <p>Svelte</p>
+            </div>
+        </div>
+        <div class="skills-category">
+            <h3>Backend</h3>
+            <div class="skills-box">
+                <img src="assets/img/firebase.png" alt="Firebase">
+                <p>Firebase</p>
+                <img src="assets/img/nodejs.png" alt="Node.js">
+                <p>Node.js</p>
+                <img src="assets/img/sequelize.png" alt="Sequelize ORM">
+                <p>Sequelize ORM</p>
+            </div>
+        </div>
+        <div class="skills-category">
+            <h3>Web3</h3>
+            <div class="skills-box">
+                <img src="assets/img/solidity.png" alt="Solidity">
+                <p>Solidity</p>
+            </div>
+        </div>
+        <div class="skills-category">
+            <h3>Mobile Development</h3>
+            <div class="skills-box">
+                <img src="assets/img/solidity.png" alt="Solidity">
+                <p>Android Studios</p>
+                <img src="assets/img/solidity.png" alt="Solidity">
+                <p>XCode</p>
+                <img src="assets/img/solidity.png" alt="Solidity">
+                <p>Flutter</p>
+            </div>
+        </div>
+        <div class="skills-category">
+            <h3>Prototyping</h3>
+            <div class="skills-box">
+                <img src="assets/img/solidity.png" alt="Solidity">
+                <p>Figma</p>
+            </div>
+        </div>
+        <div class="skills-category">
+            <h3>Languages</h3>
+            <div class="skills-box">
+                <img src="assets/img/android.png" alt="Android SDK">
+                <p>Android SDK</p>
+                <img src="assets/img/swift.png" alt="Swift">
+                <p>Swift</p>
+                <img src="assets/img/flutter.png" alt="Flutter">
+                <p>Flutter</p>
+            </div>
+        </div>
+    </section> -->
+
+    <section id="CCAs">
+        <h2>Other Projects</h2>
+        <div class="cca-container">
+            <div class="project-card" style="background-color: #f48fb1;">
+                <div class="left-column">
+                    <!-- <img src="assets\img\placeholder.png" alt="dGtal-Registry"> -->
+                </div>
+                <div class="right-column">
+                    <h3 style="color: #000000;">For3zt.ai</h3>
+                    <h3 style="font-size: 15px; margin-top: -15px; color: #000000;">NUS GroundZero 2024 Finalist <br> Offered Hangar Incubation </h3>
+                    <p style="color: #000000;">Pitched AI-driven bioacoustic technology for real-time forest health insights and ecological forecasts at For3zt.ai.</p>
+                </div>
+            </div>
+            <div class="project-card" style="background-color: #1976d2;">
+                <div class="left-column">
+                    <!-- <img src="assets\img\placeholder.png" alt="dGtal-Registry"> -->
+                </div>
+                <div class="right-column">
+                    <h3 style="color: #ffffff;">TransportGPT6A</h3>
+                    <h3 style="font-size: 15px; margin-top: -15px; color: #ffffff;">NUS-NCS AI Challenge</h3>
+                    <p style="color: #ffffff;">Developed Traffic Situation GPT Chatbot using OpenAI API.</p>
+                </div>
+            </div>
+            <div class="project-card" style="background-color: #283593;">
+                <div class="left-column">
+                    <!-- <img src="assets\img\placeholder.png" alt="dGtal-Registry"> -->
+                </div>
+                <div class="right-column">
+                    <h3 style="color: #ffffff;">dGtal Registry</h3>
+                    <h3 style="font-size: 15px; margin-top: -15px; color: #ffffff;">NUS LifeHack 2024</h3>
+                    <p style="color: #ffffff;">Fullstack Blockchain digital asset copyright protection platform.</p>
+                </div>
+            </div>
+            <div class="project-card" style="background-color: #ff5722;">
+                <div class="left-column">
+                    <!-- <img src="assets\img\placeholder.png" alt="TriveTribe"> -->
+                </div>
+                <div class="right-column">
+                    <h3 style="color: #ffffff;">TriveTribe</h3>
+                    <h3 style="font-size: 15px; margin-top: -15px; color: #ffffff;">NUS Hack4Good 2024</h3>
+                    <p style="color: #ffffff;">Fullstack gamified volunteer tracking platform.</p>
+                </div>
+            </div>
+            <div class="project-card" style="background-color: #00796b;">
+                <div class="left-column">
+                    <!-- <img src="assets\img\placeholder.png" alt="HoloLens Sustainability App"> -->
+                </div>
+                <div class="right-column">
+                    <h3 style="color: #ffffff;">HoloLens Sustainability App</h3>
+                    <h3 style="font-size: 15px; margin-top: -15px; color: #ffffff;">DSTA BrainHack 2024</h3>
+                    <p style="color: #ffffff;">Got carried in developing an eco-label learning AR application.</p>
+                </div>
+            </div>
+            <div class="project-card" style="background-color: #e91e63;">
+                <div class="left-column">
+                    <!-- <img src="assets\img\placeholder.png" alt="Weather Forecast Website"> -->
+                </div>
+                <div class="right-column">
+                    <h3 style="color: #ffffff;">Weather Forecast Website</h3>
+                    <h3 style="font-size: 15px; margin-top: -15px; color: #ffffff;">Hack&Roll 2023</h3>
+                    <p style="color: #ffffff;">Simple website made for hackathon.</p>
+                </div>
+            </div>
+            <div class="project-card" style="background-color: #1c1c1c;">
+                <div class="left-column">
+                    <!-- <img src="assets\img\placeholder.png" alt="TechNews WebScraper Telebot"> -->
+                </div>
+                <div class="right-column">
+                    <h3 style="color: #ffa726;">TechNews WebScraper Telebot</h3>
+                    <p style="color: #ffa726;">Scrapes TechCrunch.com for latest start-up news, uses AWS Lambda and CloudWatch.</p>
+                </div>
+            </div>
+            <div class="project-card" style="background-color: #ffffff;">
+                <div class="left-column">
+                    <!-- <img src="assets\img\placeholder.png" alt="iOS To-Do List Application"> -->
+                </div>
+                <div class="right-column">
+                    <h3 style="color: #000000;">iOS To-Do List Application</h3>
+                    <p style="color: #000000;">Developed using Swift.</p>
+                </div>
+            </div>
+            <div class="project-card" style="background-color: #303f9f;">
+                <div class="left-column">
+                    <!-- <img src="assets\img\placeholder.png" alt="2048 Game"> -->
+                </div>
+                <div class="right-column">
+                    <h3 style="color: #ffffff;">2048 Game</h3>
+                    <p style="color: #ffffff;">Remake of the famous 2048 game using HTML, CSS, JS.</p>
+                </div>
+            </div>
+            <div class="project-card" style="background-color: #512da8;">
+                <div class="left-column">
+                    <!-- <img src="assets\img\placeholder.png" alt="RollABallUnity"> -->
+                </div>
+                <div class="right-column">
+                    <h3 style="color: #ffffff;">RollABallUnity</h3>
+                    <p style="color: #ffffff;">Simple 3D Unity game where a player controls a ball to collect coins.</p>
+                </div>
+            </div>
+            <div class="project-card" style="background-color: #4caf50;">
+                <div class="left-column">
+                    <!-- <img src="assets\img\placeholder.png" alt="Nightmare 3rd Person Shooter"> -->
+                </div>
+                <div class="right-column">
+                    <h3 style="color: #ffffff;">Nightmare 3rd Person Shooter</h3>
+                    <p style="color: #ffffff;">Third-Person Shooter Game in Unity.</p>
+                </div>
+            </div>
+            <div class="project-card" style="background-color: #ff7043;">
+                <div class="left-column">
+                    <!-- <img src="assets\img\placeholder.png" alt="WebForum"> -->
+                </div>
+                <div class="right-column">
+                    <h3 style="color: #ffffff;">WebForum</h3>
+                    <p style="color: #ffffff;">Basic webforum project using Typescript, Ruby on Rails, PostgreSQL, RESTful API.</p>
+                </div>
+            </div>            
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Jeriel. Website inspired by <a href="https://jeffsieu.com/" target="_blank">Jeff Sieu</a>.</p>
+
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Fetch the visit count from the server
+        fetch('/api/visit')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('visitor-count').textContent = data.count;
+            });
+    </script>
+
+
+</body>
+</html>

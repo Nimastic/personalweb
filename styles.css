@@ -3,6 +3,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    padding-top: 100px; /* Adjust the padding to match the height of your header */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 header {
@@ -10,6 +12,10 @@ header {
     padding: 20px;
     text-align: center;
     border-bottom: 1px solid #ddd;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 nav ul {
@@ -37,19 +43,120 @@ nav ul li button {
     transition: all 0.2s ease;
 }
 
+
+nav ul li button:hover {
+    top: -3px;
+    left: -3px;
+    box-shadow: 0px 0px 0px #000, 3px 3px 0px rgba(0, 0, 0, 0.1);
+}
+
+.night-mode-btn {
+    width: 40px; /* Make the button square */
+    height: 40px; /* Make the button square */
+    padding: 0; /* Remove default padding */
+    align-items: center;
+    justify-content: center;
+}
+
+
+.night-mode-btn i {
+    top: 3px;
+    font-size: 20px; /* Size of the moon icon */
+    pointer-events: none; /* Ensure icon doesn't interfere with button click */
+}
+
 section h2 {
     display: inline-block;
     background-color: #fff;
     color: #000;
     border: 1px solid #000;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 16px;
+    padding: 20px 40px;
+    border-radius: 0px;
+    font-size: 20px;
     font-weight: bold;
     position: relative;
     box-shadow: 3px 3px 0px #000, 6px 6px 0px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    margin-top: 20px;
 }
+
+section h2 button {
+    margin-top: 20px;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+    padding: 10px 20px;
+    border-radius: 0px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    box-shadow: 3px 3px 0px #000, 6px 6px 0px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+    
+}
+
+section h2 button:hover  {
+    top: -3px;
+    left: -3px;
+    box-shadow: 0px 0px 0px #000, 3px 3px 0px rgba(0, 0, 0, 0.1);
+}
+
+.button2-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between buttons */
+    margin-top: 20px; /* Margin to separate from other elements */
+}
+
+.button2 {
+    width: 50px; /* Set the width of the square button */
+    height: 50px; /* Set the height of the square button */
+    background-color: #fff;
+    color: #000000;
+    border: 1px solid #000;
+    border-radius: 0px;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    box-shadow: 3px 3px 0px #000, 6px 6px 0px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Remove underline from links */
+}
+
+.button2:hover {
+    top: -3px;
+    left: -3px;
+    box-shadow: 0px 0px 0px #000, 3px 3px 0px rgba(0, 0, 0, 0.1);
+}
+
+.btn2 {
+    margin-top: 20px;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+    padding: 10px 20px;
+    border-radius: 0px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    box-shadow: 3px 3px 0px #000, 6px 6px 0px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+    text-decoration: none; /* Ensure text has no underline */
+    display: inline-block; /* Ensure it behaves like a button */
+}
+
+.btn2:hover {
+    top: -3px;
+    left: -3px;
+    box-shadow: 0px 0px 0px #000, 3px 3px 0px rgba(0, 0, 0, 0.1);
+}
+
 
 .section-header {
     display: inline-block;
@@ -66,19 +173,17 @@ section h2 {
 }
 
 
-nav ul li button:hover {
-    top: -3px;
-    left: -3px;
-    box-shadow: 0px 0px 0px #000, 3px 3px 0px rgba(0, 0, 0, 0.1);
-}
 
 section {
     padding: 50px;
     text-align: center;
+    margin: 0; /* Added to remove default margins */
+    margin-bottom: px;
 }
 
 section#intro {
     background-color: #f4f4f4;
+    padding-bottom: 0px;
 }
 
 section h2 {
@@ -107,7 +212,7 @@ img {
     color: #000;
     border: 1px solid #000;
     padding: 5px 10px;
-    border-radius: 5px;
+    border-radius: 0%;
     font-size: 16px;
     font-weight: bold;
     position: relative;
@@ -123,8 +228,8 @@ img {
     background-color: #002E5D; /* Adjust background color as needed */
     border-radius: 0px;
     padding: 100px;
-    margin: 0px -50px 1px -50px;
-    width: 100vw; /* Make the card take the full width of the viewport */
+    margin: 1px 0px 1px 0px;
+    width: 100%; /* Adjust the width as needed */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: left;
     color: #F5F5F5; /* Adjust text color as needed */
@@ -186,31 +291,28 @@ img {
     background-color: #002E5D; /* Adjust background color as needed */
     border-radius: 0px;
     padding: 100px;
-    margin: 0px -50px 1px -50px;
-    width: 100vw; /* Make the card take the full width of the viewport */
+    margin: 1px 0px 1px 0px;
+    width: 30vw; /* Adjust width as needed to fit side by side */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: left;
     color: #F5F5F5; /* Adjust text color as needed */
     box-sizing: border-box; /* Ensure padding and border are included in the width */
+    margin-bottom: 1px; /* Space between rows */
 }
 
 .project-card .left-column {
     flex-shrink: 0;
-    margin-left: 400px; /* Add left margin for centralization */
-
+    margin-right: 0px; /* Add right margin for spacing */
 }
 
 .project-card img {
-    width: 300px; /* Adjust the width as needed */
+    width: 100px; /* Adjust the width as needed */
     height: auto;
     border-radius: 5px;
-    margin-right: 20px;
 }
 
 .project-card .right-column {
     flex: 1;
-    margin-right: 400px; /* Add right margin for centralization */
-
 }
 
 .project-card h3 {
@@ -257,18 +359,18 @@ img {
     align-items: center;
     background-color: #002E5D; /* Adjust background color as needed */
     border-radius: 0px;
-    padding: 50px;
-    width: 45vw; /* Adjust width as needed to fit side by side */
+    padding: 100px;
+    width: 30vw; /* Adjust width as needed to fit side by side */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: left;
     color: #F5F5F5; /* Adjust text color as needed */
     box-sizing: border-box; /* Ensure padding and border are included in the width */
-    margin-bottom: 20px; /* Space between rows */
+    margin-bottom: 1px; /* Space between rows */
 }
 
 .cca-card .left-column {
     flex-shrink: 0;
-    margin-right: 20px; /* Add right margin for spacing */
+    margin-right: 0px; /* Add right margin for spacing */
 }
 
 .cca-card img {
@@ -311,6 +413,52 @@ img {
     background-color: #D4D4D4; /* Adjust hover background color as needed */
 }
 
+.skills-section {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.skills-category {
+    margin-bottom: 30px;
+}
+
+.skills-category h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.skills-category .skills-box {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+    padding: 5px 10px;
+    border-radius: 0%;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    box-shadow: 3px 3px 0px #000, 6px 6px 0px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+
+.skills-category .skills-box img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.skills-category .skills-box p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.skills-category .skills-box div {
+    display: flex;
+    align-items: center;
+}
+
 
 body.night-mode {
     background-color: #222;
@@ -319,6 +467,7 @@ body.night-mode {
 
 body.night-mode header {
     background-color: #333;
+    border-bottom: 1px solid #555; /* Adjusted for better contrast */
 }
 
 body.night-mode footer {
@@ -336,12 +485,69 @@ body.night-mode nav ul li button {
     border-color: #fff;
 }
 
-body.night-mode nav ul li button2 {
+body.night-mode nav ul li button:hover {
+    background-color: #666;
+}
+
+body.night-mode .button2 {
     background-color: #444;
     color: #fff;
     border-color: #fff;
 }
 
-body.night-mode nav ul li button:hover {
+body.night-mode .button2:hover {
     background-color: #666;
+}
+
+body.night-mode section h2,
+body.night-mode section h2 button {
+    background-color: #444;
+    color: #fff;
+    border-color: #666;
+}
+
+body.night-mode .experience-card,
+body.night-mode .cca-card,
+body.night-mode .skills-category .skills-box {
+    background-color: #444;
+    color: #fff;
+    border-color: #666;
+}
+
+body.night-mode .experience-card h3,
+body.night-mode .cca-card h3,
+body.night-mode .skills-category h3 {
+    color: #ffa726; /* A color that stands out against the dark background */
+}
+
+body.night-mode .experience-card p,
+body.night-mode .cca-card p,
+body.night-mode .skills-category p {
+    color: #ddd; /* Lighter shade for text */
+}
+
+body.night-mode .btn,
+body.night-mode .experience-card .btn,
+body.night-mode .cca-card .btn,
+body.night-mode .skills-category .skills-box .btn {
+    background-color: #666;
+    color: #fff;
+    border-color: #fff;
+}
+
+body.night-mode .btn:hover,
+body.night-mode .experience-card .btn:hover,
+body.night-mode .cca-card .btn:hover,
+body.night-mode .skills-category .skills-box .btn:hover {
+    background-color: #888;
+}
+
+body.night-mode .night-mode-btn {
+    background-color: #666;
+    color: #fff;
+    border-color: #fff;
+}
+
+body.night-mode .night-mode-btn:hover {
+    background-color: #888;
 }

@@ -1,25 +1,50 @@
 const express = require('express');
-const http = require('http');
-const socketIo = require('socket.io');
+const fs = require('fs');
+const path = require('path');
 
 const app = express();
-const server = http.createServer(app);
-const io = socketIo(server);
+const PORT = process.env.PORT || 3000;
 
-let visitorCount = 0;
+const countFilePath = path.join(__dirname, 'count.json');
 
-io.on('connection', (socket) => {
-    visitorCount++;
-    io.emit('visitorUpdate', visitorCount);
+// Ensure the count.json file exists
+if (!fs.existsSync(countFilePath)) {
+    fs.writeFileSync(countFilePath, JSON.stringify({ count: 0 }));
+}
 
-    socket.on('disconnect', () => {
-        visitorCount--;
-        io.emit('visitorUpdate', visitorCount);
-    });
+// Function to read the current count from file
+const getCountFromFile = () => {
+    const data = fs.readFileSync(countFilePath);
+    return JSON.parse(data).count;
+};
+
+// Function to save the current count to file
+const saveCountToFile = (count) => {
+    fs.writeFileSync(countFilePath, JSON.stringify({ count }));
+};
+
+// Serve the index.html file from the root directory
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.use(express.static('public'));
+// Serve static files from the root directory
+app.use(express.static(__dirname));
 
-server.listen(3000, () => {
-    console.log('Server is running on port 3000');
+// API endpoint to update and get the visit count
+app.get('/api/visit', (req, res) => {
+    let count = getCountFromFile();
+    count += 1;
+    saveCountToFile(count);
+    res.json({ count });
+});
+
+// API endpoint to get the current visit count
+app.get('/api/count', (req, res) => {
+    const count = getCountFromFile();
+    res.json({ count });
+});
+
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });

@@ -7,3 +7,9 @@ function scrollToSection(id) {
 function toggleNightMode() {
     document.body.classList.toggle('night-mode');
 }
+
+const socket = io();
+
+socket.on('visitorUpdate', (count) => {
+    document.getElementById('visitor-count').textContent = count;
+});
