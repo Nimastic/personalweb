@@ -39,7 +39,7 @@
                 <a href="https://www.behance.net/jerielchan" class="button2" style="background-color: #0057ff; color: #fff;"><i class="fab fa-behance"></i></a>
                 <a href="https://t.me/jerielchan" class="button2" style="background-color: #0088cc; color: #fff;"><i class="fab fa-telegram-plane"></i></a>
             </div>
-            <p>Total Visits: <span id="visitor-count">0</span></p>
+            <!-- <p>Total Visits: <span id="visitor-count">0</span></p> -->
         
         </h2>
     </section>
@@ -337,14 +337,14 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>
+    <!-- <script>
         // Fetch the visit count from the server
         fetch('/api/visit')
             .then(response => response.json())
             .then(data => {
                 document.getElementById('visitor-count').textContent = data.count;
             });
-    </script>
+    </script> -->
 
 
 </body>
