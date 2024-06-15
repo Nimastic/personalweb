@@ -28,3 +28,12 @@ const socket = io();
 socket.on('visitorUpdate', (count) => {
     document.getElementById('visitor-count').textContent = count;
 });
+
+function toggleOthers() {
+    var popup = document.getElementById('others-popup');
+    if (popup.style.display === 'block') {
+        popup.style.display = 'none';
+    } else {
+        popup.style.display = 'block';
+    }
+}

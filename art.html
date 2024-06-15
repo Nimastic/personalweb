@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Jeriel's Art Gallery</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="art.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <button class="dropdown-btn" onclick="toggleDropdown()"><i class="fas fa-bars"></i></button>
+            <ul>
+                <li><button onclick="window.location.href='/index.html'">Home</button></li>
+                <li><button onclick="window.location.href='/blog.html'">Blog</button></li>
+                <li><button onclick="window.location.href='/art.html'">Art</button></li>
+                <li><button onclick="scrollToSection('#contact')">Contact</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="gallery">
+        <h2>Art Gallery</h2>
+        <div class="gallery-grid">
+            <!-- Placeholder images -->
+            <div class="gallery-item"><img src="assets/art/face.jpeg" alt="Face"></div>
+            <div class="gallery-item"><img src="assets/art/flashrun.jpeg" alt="Flash Run"></div>
+            <div class="gallery-item"><img src="assets/art/garou.jpeg" alt="Garou"></div>
+            <div class="gallery-item"><img src="assets/art/heart.jpeg" alt="Heart"></div>
+            <div class="gallery-item"><img src="assets/art/mancarriesskull.jpeg" alt="Man Carries Skull"></div>
+            <div class="gallery-item"><img src="assets/art/negflasheyes.jpeg" alt="Negative Flash Eyes"></div>
+            <div class="gallery-item"><img src="assets/art/reverseflash.jpeg" alt="Reverse Flash"></div>
+            <div class="gallery-item"><img src="assets/art/satuhati.jpeg" alt="Satu Hati"></div>
+            <div class="gallery-item"><img src="assets/art/skull.jpeg" alt="Skull"></div>
+            <div class="gallery-item"><img src="assets/art/soc.jpeg" alt="SOC"></div>
+            <div class="gallery-item"><img src="assets/art/trex.jpeg" alt="T-Rex"></div>
+            <!-- Add more images as needed -->
+        </div>
+    </section>
+
+    <!-- <section id="home">
+        <h2>Welcome to My Blog</h2>
+        <p>This is where I share my thoughts and experiences.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm Jeriel! I'm a software developer with a passion for blogging. Welcome to my blog where I share my thoughts, projects, and more.</p>
+    </section> -->
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out to me through the following channels:</p>
+        <div class="button2-container">
+            <a href="https://github.com/nimastic" class="button2" style="background-color: #333; color: #fff;"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/jerielchan" class="button2" style="background-color: #0077b5; color: #fff;"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:jerielchanzy@gmail.com" class="button2" style="background-color: #d44638; color: #fff;"><i class="fas fa-envelope"></i></a>
+            <a href="https://codepen.io/jerielchan" class="button2" style="background-color: #000; color: #fff;"><i class="fab fa-codepen"></i></a>
+            <a href="https://www.behance.net/jerielchan" class="button2" style="background-color: #0057ff; color: #fff;"><i class="fab fa-behance"></i></a>
+            <a href="https://t.me/jerielchan" class="button2" style="background-color: #0088cc; color: #fff;"><i class="fab fa-telegram-plane"></i></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Jeriel. Website inspired by <a href="https://jeffsieu.com/" target="_blank">Jeff Sieu</a>.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

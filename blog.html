@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Jeriel's Blog</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <button class="dropdown-btn" onclick="toggleDropdown()"><i class="fas fa-bars"></i></button>
+            <ul>
+                <li><button onclick="window.location.href='/index.html'">Home</button></li>
+                <li><button onclick="window.location.href='/blog.html'">Blog</button></li>
+                <li><button onclick="window.location.href='/art.html'">Art</button></li>
+                <li><button onclick="scrollToSection('#contact')">Contact</button></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section id="blog">
+        <h2>Blog Posts</h2>
+        <div class="blog-post">
+            <h3>WIP</h3>
+            <p> Date: 15/6/2024 </p>
+            <p> WIP </p>
+            <a href="blog/post1.html" class="btn">stay tuned</a>
+        </div>
+        <!-- <div class="blog-post">
+            <h3>Blog Post Title 2</h3>
+            <p>Summary of the second blog post...</p>
+            <a href="blog/post2.html" class="btn">Read More</a>
+        </div> -->
+        <!-- Add more blog posts as needed -->
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out to me through the following channels:</p>
+        <div class="button2-container">
+            <a href="https://github.com/nimastic" class="button2" style="background-color: #333; color: #fff;"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/jerielchan" class="button2" style="background-color: #0077b5; color: #fff;"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:jerielchanzy@gmail.com" class="button2" style="background-color: #d44638; color: #fff;"><i class="fas fa-envelope"></i></a>
+                <a href="https://codepen.io/jerielchan" class="button2" style="background-color: #000; color: #fff;"><i class="fab fa-codepen"></i></a>
+                <a href="https://www.behance.net/jerielchan" class="button2" style="background-color: #0057ff; color: #fff;"><i class="fab fa-behance"></i></a>
+                <a href="https://t.me/jerielchan" class="button2" style="background-color: #0088cc; color: #fff;"><i class="fab fa-telegram-plane"></i></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Jeriel.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -16,16 +16,18 @@
             <button class="dropdown-btn" onclick="toggleDropdown()"><i class="fas fa-bars"></i></button>
             <ul>
                 <li><button onclick="scrollToSection('#technical-experience')">Technical Experience</button></li>
-                <li><button onclick="scrollToSection('#Projects')">My projects</button></li>
+                <li><button onclick="scrollToSection('#Projects')">My Projects</button></li>
                 <li><button onclick="scrollToSection('#CCAs')">CCAs</button></li>
-
-                <!-- <li><button onclick="scrollToSection('#skills-tools')">Skills/tools</button></li> -->
-                <li><button onclick="window.location.href='old-site/index.html'">Visit my old site</button></li>
-
+                <li><button class="others-btn" onclick="toggleOthers()">Others</button></li>
                 <li><button class="night-mode-btn" onclick="toggleNightMode()"><i class="fas fa-moon"></i></button></li>
             </ul>
         </nav>
     </header>
+    <div id="others-popup" class="others-popup">
+        <button onclick="window.location.href='/blog.html'">My Blog</button>
+        <button onclick="window.location.href='/art.html'">My Art</button>
+        <button onclick="window.location.href='old-site/index.html'">Visit my old site</button>
+    </div>
 
     <section id="intro">
         <h2>Hi, I'm Jeriel!
@@ -77,42 +79,7 @@
         
     </section>
 
-    <section id="Projects">
-        <h2>My Projects</h2>
-        <div class="cca-container"><div class="cca-container">
-            <div class="project-card" style="background-color: #dddddd;">
-                <div class="left-column">
-                    <!-- <img src="assets/img/qnow_logo.png" alt="Q.Now"> -->
-                </div>
-                <div class="right-column">
-                    <h3 style="color: #414141">Q.Now <br> </h3>
-                    <h3 style="font-size: 15px; margin-top: -15px; color: #414141;">IEEE iNTUition v8.0 2022 <br>Hackathon Champions </h3>
-                    <p style="color: #414141">MedTech app comparing waiting time of clinics during Covid 19</p>
-                </div>
-            </div>
-            <div class="project-card" style="background-color: #303f9f;">
-                <div class="left-column">
-                    <!-- <img src="assets/img/nexuswrap_logo.png" alt="NexusWrap"> -->
-                </div>
-                <div class="right-column">
-                    <h3 style="color: #ffffff;">NexusWrap</h3>
-                    <h3 style="font-size: 15px; margin-top: -15px; color: #ffffff;">NUS Fintech Summit 2024 <br> Hackathon 3rd Place <br> Offered NUS-AIDF Fincubation incubation </h3>
-                    <p style="color: #ffffff;">Cross-Chain Bridging Platform for NUS Fintech Summit 2024. </p>
-                </div>
-            </div>
-            <div class="project-card" style="background-color: #0055aa;">
-                <div class="left-column">
-                    <!-- <img src="assets/img/spa_logo.png" alt="Smart Personal Assistant"> -->
-                </div>
-                <div class="right-column">
-                    <h3 style="color: #ffed47;">Smart Personal Assistant (SPA) </h3>
-                    <h3 style="font-size: 15px; margin-top: -15px; color: #ffed47;">NUS Orbital Software Development Project 2023 <br> Intermediate Certification</h3>
-                    <p style="color: #ffed47;">Productivity app with machine learning features using TensorFlowLite for task suggestions</p>
-                </div>
-            </div>
-        </div>
-        
-    </section>
+    
     
 
     <section id="CCAs">
@@ -219,6 +186,42 @@
             </div>
         </div>
     </section> -->
+    <section id="Projects">
+        <h2>My Projects</h2>
+        <div class="cca-container"><div class="cca-container">
+            <div class="project-card" style="background-color: #dddddd;">
+                <div class="left-column">
+                    <!-- <img src="assets/img/qnow_logo.png" alt="Q.Now"> -->
+                </div>
+                <div class="right-column">
+                    <h3 style="color: #414141">Q.Now <br> </h3>
+                    <h3 style="font-size: 15px; margin-top: -15px; color: #414141;">IEEE iNTUition v8.0 2022 <br>Hackathon Champions </h3>
+                    <p style="color: #414141">MedTech app comparing waiting time of clinics during Covid 19</p>
+                </div>
+            </div>
+            <div class="project-card" style="background-color: #303f9f;">
+                <div class="left-column">
+                    <!-- <img src="assets/img/nexuswrap_logo.png" alt="NexusWrap"> -->
+                </div>
+                <div class="right-column">
+                    <h3 style="color: #ffffff;">NexusWrap</h3>
+                    <h3 style="font-size: 15px; margin-top: -15px; color: #ffffff;">NUS Fintech Summit 2024 <br> Hackathon 3rd Place <br> Offered NUS-AIDF Fincubation incubation </h3>
+                    <p style="color: #ffffff;">Cross-Chain Bridging Platform for NUS Fintech Summit 2024. </p>
+                </div>
+            </div>
+            <div class="project-card" style="background-color: #0055aa;">
+                <div class="left-column">
+                    <!-- <img src="assets/img/spa_logo.png" alt="Smart Personal Assistant"> -->
+                </div>
+                <div class="right-column">
+                    <h3 style="color: #ffed47;">Smart Personal Assistant (SPA) </h3>
+                    <h3 style="font-size: 15px; margin-top: -15px; color: #ffed47;">NUS Orbital Software Development Project 2023 <br> Intermediate Certification</h3>
+                    <p style="color: #ffed47;">Productivity app with machine learning features using TensorFlowLite for task suggestions</p>
+                </div>
+            </div>
+        </div>
+        
+    </section>
 
     <section id="CCAs">
         <h2>Other Projects</h2>
