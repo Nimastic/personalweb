@@ -89,7 +89,7 @@ section h2 {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
+    gap: 5px;
 }
 
 .gallery-item {
@@ -148,6 +148,98 @@ img {
     height: auto;
     display: block;
     margin: 0 auto;
+}
+
+body.night-mode {
+    background-color: #222;
+    color: #fff;
+}
+
+body.night-mode header {
+    background-color: #333;
+    border-bottom: 1px solid #555; /* Adjusted for better contrast */
+}
+
+body.night-mode footer {
+    background-color: #333;
+}
+
+body.night-mode .project-card {
+    background-color: #444;
+    border-color: #666;
+}
+
+body.night-mode nav ul li button {
+    background-color: #444;
+    color: #fff;
+    border-color: #fff;
+}
+
+body.night-mode nav ul li button:hover {
+    background-color: #666;
+}
+
+body.night-mode .button2 {
+    background-color: #444;
+    color: #fff;
+    border-color: #fff;
+}
+
+body.night-mode .button2:hover {
+    background-color: #666;
+}
+
+body.night-mode section h2,
+body.night-mode section h2 button {
+    background-color: #444;
+    color: #fff;
+    border-color: #666;
+}
+
+body.night-mode .experience-card,
+body.night-mode .cca-card,
+body.night-mode .skills-category .skills-box {
+    background-color: #444;
+    color: #fff;
+    border-color: #666;
+}
+
+body.night-mode .experience-card h3,
+body.night-mode .cca-card h3,
+body.night-mode .skills-category h3 {
+    color: #ffa726; /* A color that stands out against the dark background */
+}
+
+body.night-mode .experience-card p,
+body.night-mode .cca-card p,
+body.night-mode .skills-category p {
+    color: #ddd; /* Lighter shade for text */
+}
+
+body.night-mode .btn,
+body.night-mode .experience-card .btn,
+body.night-mode .cca-card .btn,
+body.night-mode .skills-category .skills-box .btn {
+    background-color: #666;
+    color: #fff;
+    border-color: #fff;
+}
+
+body.night-mode .btn:hover,
+body.night-mode .experience-card .btn:hover,
+body.night-mode .cca-card .btn:hover,
+body.night-mode .skills-category .skills-box .btn:hover {
+    background-color: #888;
+}
+
+body.night-mode .night-mode-btn {
+    background-color: #666;
+    color: #fff;
+    border-color: #fff;
+}
+
+body.night-mode .night-mode-btn:hover {
+    background-color: #888;
 }
 
 /* Media Queries for Mobile Devices */
@@ -217,6 +309,6 @@ img {
     }
 
     .gallery-grid {
-        grid-template-columns: repeat(2, 1fr); /* Adjust for smaller screens */
+        grid-template-columns: repeat(3, 1fr); /* Adjust for smaller screens */
     }
 }
