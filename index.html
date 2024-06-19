@@ -15,17 +15,15 @@
         <nav>
             <button class="dropdown-btn" onclick="toggleDropdown()"><i class="fas fa-bars"></i></button>
             <ul>
-                <li><button onclick="scrollToSection('#technical-experience')">Technical Experience</button></li>
-                <li><button onclick="scrollToSection('#Projects')">My Projects</button></li>
-                <li><button onclick="scrollToSection('#CCAs')">CCAs</button></li>
+                <li><button onclick="scrollToSection('#technical-experience')">Home</button></li>
+                <li><button onclick="window.location.href='/blog.html'">Blog</button>
+                <li><button onclick="window.location.href='/art.html'">Art</button>
                 <li><button class="others-btn" onclick="toggleOthers()">Others</button></li>
                 <li><button class="night-mode-btn" onclick="toggleNightMode()"><i class="fas fa-moon"></i></button></li>
             </ul>
         </nav>
     </header>
     <div id="others-popup" class="others-popup">
-        <button onclick="window.location.href='/blog.html'">My Blog</button>
-        <button onclick="window.location.href='/art.html'">My Art</button>
         <button onclick="window.location.href='old-site/index.html'">Visit my old site</button>
     </div>
 
